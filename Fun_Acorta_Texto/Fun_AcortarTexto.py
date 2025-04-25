@@ -5,8 +5,9 @@ def max_longitud (texto, maxlong):
         print("\n--- - ---")
         print(texto[:maxlong]+"...")
         print("El Texto Original es: ",texto)
+    else:
+        print(texto)
 
 texto = input("Ingresa el texto: ")
 maxlong = int(input("Ingresa la longitud máxima deseada: "))
-other = input("Other")
 max_longitud(texto, maxlong)

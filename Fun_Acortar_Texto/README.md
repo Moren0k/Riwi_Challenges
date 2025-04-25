@@ -1,6 +1,6 @@
 ## Título: Función para acortar texto con puntos suspensivos
 
-Descripción:
+#### Descripción:
 
 Crea una función llamada acortar_texto que reciba dos parámetros:
 
@@ -10,10 +10,8 @@ Crea una función llamada acortar_texto que reciba dos parámetros:
 
 La función debe verificar si la longitud del texto supera el valor de max_longitud.
 
-    Si no lo supera, debe devolver el texto original.
-    Si lo supera, debe devolver una versión recortada del texto que:
-        tenga como máximo max_longitud caracteres,
-            y termine con tres puntos suspensivos (...) para indicar que fue acortado.
+- Si no lo supera, debe devolver el texto original.
 
+- Si lo supera, debe devolver una versión recortada del texto que:
+tenga como máximo max_longitud caracteres,y termine con tres puntos suspensivos (...) para indicar que fue acortado.
 
-    ⚠️ Ten en cuenta que los puntos suspensivos cuentan como 3 caracteres dentro del límite de longitud total.

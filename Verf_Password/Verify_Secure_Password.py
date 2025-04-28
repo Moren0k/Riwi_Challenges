@@ -1,4 +1,4 @@
-def verf_password_segura():
+def verify_secure_password():
     segura = False
 
     while not segura:
@@ -18,4 +18,4 @@ def verf_password_segura():
         else:
             print("¡Contraseña Segura!")
             segura = True
-verf_password_segura()
+verify_secure_password()

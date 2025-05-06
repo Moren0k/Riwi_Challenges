@@ -1,29 +1,40 @@
-print("\n---Bienvenido a la Calculadora de Promedios de Estudiantes---")
-countStudents = int(input("¿Cuántos estudiantes quieres ingresar? "))
-grades = []
+print("\n---Bienvenido---")
+num_students = int(input("Ingresa la cantidad de estudiantes: "))
+students = []
 
-def add_student(countStudents, grades):
-    for i in range(countStudents):
-        nameStudent = input("Ingresa el nombre del estudiante: ")
-        for i in range(3):
-            grade = float(input(f"Ingrese la nota {i + 1} de {nameStudent}: "))
+def add_student(num_students):
+    for i in range(num_students):
+        name = input("Ingresa el nombre del estudiante: ")
+        grades = []
+        for j in range(3):
+            while True:
+                grade = float(input(f"Ingresa la calificación {j+1} del estudiante {name}: "))
+                if 0 <= grade <= 5:
+                    break
+                else:
+                    print("Calificación inválida. Debe estar entre 0 y 5")
             grades.append(grade)
-    return nameStudent, grades
+        students.append({"name": name, "grades": grades})
+    print("\nEstudiantes agregados con éxito.")
+    return grades
 
-def calculate_promedio(grades):
-    return sum(grades) / len(grades)
+def calculate_average(grades):
+    average = sum(grades) / len(grades)
+    return average
 
-def aprove_student(promedio):
-    if promedio >= 3.0:
-        print("El estudiante ha aprobado.")
+def check_pass_status(average):
+    if average >= 3.0:
+        return "Aprobado"
     else:
-        print("El estudiante ha reprobado.")
-        
+        return "Reprobado"
+
 def main():
-    nameStudent, grades = add_student(countStudents)
-    promedio = calculate_promedio(grades)
-    print(f"El promedio de {nameStudent} es: {promedio}")
-    aprove_student(promedio)
+    add_student(num_students)
+    for student in students:
+        name = student["name"]
+        grades = student["grades"]
+        average = calculate_average(grades)
+        status = check_pass_status(average)
+        print(f"\n{name} tiene un promedio de {average:.2f} - {status}")
 
 main()
-# Este código permite ingresar el nombre de un estudiante y sus notas, calcula el promedio y determina si el estudiante aprobó o reprobó.

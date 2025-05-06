@@ -8,14 +8,14 @@ Crea un programa en Python que permita calcular el promedio de notas de varios e
 
     Por cada estudiante, debe:
 
-        Pedir su nombre. LISTO
+        Pedir su nombre. 
 
-        Pedir tres notas (de 0 a 5). LISTO
+        Pedir tres notas (de 0 a 5). 
 
     Debes usar funciones para:
 
-        Solicitar los datos de un estudiante. LISTO
+        Solicitar los datos de un estudiante. 
 
-        Calcular el promedio de las tres notas. LISTO
+        Calcular el promedio de las tres notas. 
 
-        Mostrar si el estudiante aprueba (promedio ≥ 3.0) o reprueba. LISTO
+        Mostrar si el estudiante aprueba (promedio ≥ 3.0) o reprueba. 

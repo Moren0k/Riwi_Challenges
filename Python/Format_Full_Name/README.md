@@ -1,6 +1,6 @@
 # Formatear nombre completo
 
-Descripción:
+**Descripción:**
 
 Crea una función llamada formatear_nombre que reciba tres cadenas de texto: nombre, segundo_nombre y apellido.
 

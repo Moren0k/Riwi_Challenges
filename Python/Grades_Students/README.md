@@ -18,4 +18,4 @@ Crea un programa en Python que permita calcular el promedio de notas de varios e
 
         Calcular el promedio de las tres notas. 
 
-        Mostrar si el estudiante aprueba (promedio ≥ 3.0) o reprueba. 
+        Mostrar si el estudiante aprueba (promedio ≥ 3.0) o reprueba.

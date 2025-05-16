@@ -1,6 +1,6 @@
 # Convertir salario de COP a USD
 
-#### Descripción:
+**Descripción:**
 
 Escribe una función llamada convertir_a_usd que reciba dos parámetros:
 
@@ -10,5 +10,5 @@ Escribe una función llamada convertir_a_usd que reciba dos parámetros:
 
 La función debe devolver el valor del salario convertido a dólares, utilizando la fórmula: salario_usd = salario_cop / tasa
 
-### Ejemplo:
+**Ejemplo:**
 convertir_a_usd(5000000, 4000) → 1250.0

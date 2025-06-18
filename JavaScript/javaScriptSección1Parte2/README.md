@@ -10,8 +10,7 @@ Como administrador del sistema, necesito gestionar la información de un usuario
         - Debe haber una variable para el nombreUsuario (ej. "Carlos Gómez").
         - Una variable para la edadUsuario (ej. 32).
         - Una variable para el saldoCuenta (ej. 1500.75).
-        - Quiero una variable booleana usuarioPremium que se establezca en True
-        si el saldoCuenta es superior a 1000, de lo contrario False. (¡Piensa cómo
+        - Quiero una variable booleana usuarioPremium que se establezca en True si el saldoCuenta es superior a 1000, de lo contrario False. (¡Piensa cómo
         puedes asignar directamente el resultado de la comparación!).
         - Finalmente, necesito ver en la consola el nombre, edad, saldo y el estado
         de usuarioPremium, incluyendo el tipo de dato de esta última variable para

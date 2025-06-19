@@ -5,5 +5,6 @@ let restoSegundos = segundosTotales / 3600;
 let minutos = Math.floor(restoSegundos/60);
 let segundos = restoSegundos % 60;
 
-let mensaje = (`${horas} Horas, ${minutos} Minutos, ${segundos} Segundos`)
-console.log(mensaje)
+let mensaje = (`${horas} Horas, ${minutos} Minutos, ${segundos} Segundos`);
+
+console.log(mensaje);

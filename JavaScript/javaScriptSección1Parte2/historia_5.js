@@ -8,5 +8,6 @@ let promedio = sumarNotas / 3;
 
 if (promedio > 3) {
     aproboCurso = true;
-}
+};
+
 console.log(`El promedio es: ${promedio}, Estado de aprobación: ${aproboCurso}`);

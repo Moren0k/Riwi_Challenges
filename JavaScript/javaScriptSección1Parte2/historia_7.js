@@ -2,7 +2,7 @@
 let servidor = {
     nombre: "Web_Server_01",
     status: "Activo",
-    pingMs: 25
+    pingMs: 24,
 };
 
 let mensajeEstado = (`El servidor: ${servidor["nombre"]}

@@ -93,7 +93,7 @@ servidores para identificar problemas rápidamente.
 
     • Detalles:
         - Se me proporciona el servidor = "Web_Server_01", su status = "Activo", y el
-        pingMs = 25 (tiempo de respuesta en milisegundos).
+        pingMs = 24 (tiempo de respuesta en milisegundos).
         - Debo construir una mensajeEstado que diga: "El servidor Web_Server_01
         está Activo con una latencia de 25ms."
         - El mensajeEstado debe ser impreso en la consola.

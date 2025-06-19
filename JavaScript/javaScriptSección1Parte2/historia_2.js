@@ -9,5 +9,6 @@ let pedidoGrande = false;
 
 if (cantidadArticulos > 5) {
     pedidoGrande = true;
-} 
+};
+
 console.log(`TOTAL: ${totalPagar}\nTIPO DE PEDIDO: ${pedidoGrande}`);

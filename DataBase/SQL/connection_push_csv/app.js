@@ -1,10 +1,7 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import { cargarCSV } from './employeeService.js';
 import db from './db.js';
 
-// Configuraciones base
-dotenv.config();
 const app = express();
 app.use(express.json());
 
@@ -35,22 +32,22 @@ app.post('/employee', async (req, res) => {
 
         db.query(query, values, (err, result) => {
             if (err) {
-                console.error('❌ Error al insertar:', err.message);
+                console.error('Error al insertar:', err.message);
                 return res.status(500).json({ error: 'Error al insertar en la base de datos.' });
             }
 
             res.status(201).json({
-                message: '✅ Empleado registrado exitosamente.',
+                message: 'Empleado registrado exitosamente.',
                 insertedId: result.insertId
             });
         });
     } catch (error) {
-        console.error('🔥 Error en el servidor:', error.message);
+        console.error('Error en el servidor:', error.message);
         res.status(500).json({ error: 'Error interno del servidor.' });
     }
 });
 
-// Inicialización del servidor
+// Inicialización del servidor en puerto 3000
 app.listen(3000, () => {
-    console.log('🚀 Servidor corriendo en el puerto 3000');
+    console.log('Servidor corriendo en el puerto 3000');
 });

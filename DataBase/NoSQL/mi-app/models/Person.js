@@ -7,6 +7,7 @@ const personSchema = new Schema({
     lastname:String,
     lastname2:String,
     age:Number,
+    id:String,
     email:String,
     country:String
 });

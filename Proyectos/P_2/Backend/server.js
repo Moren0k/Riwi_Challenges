@@ -9,42 +9,52 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 
-/* Endpoints */
-
-// Conseguir todos los analysis
-// Traer análisis con info amigable para la tabla
+//Get para mostrar todos los análisis
 app.get('/analysis', (req, res) => {
-  const query = `
-    SELECT a.analysis_id, a.submission_id, a.ia_percentage, a.ia_detected, a.explanation,
-           f.feedback_id, f.comment,
-           s.name_coder, s.name_training
-    FROM Analysis a
-    JOIN Submissions s ON a.submission_id = s.submission_id
-    LEFT JOIN Feedbacks f ON a.analysis_id = f.analysis_id
-  `;
-  db.query(query, (err, rows) => {
-    if (err) return res.status(500).json({ error: 'Error en DB' });
-    res.json(rows);
-  });
+    const query = `
+        SELECT s.name_coder, s.name_training, a.ia_detected
+        FROM Submission s
+        INNER JOIN Analysis a 
+            ON s.submission_id = a.submission_id;
+    `;
+    db.query(query, (err, rows) => {
+        if (err) return res.status(500).json({ error: 'Error en DB' });
+        res.json(rows);
+    });
 });
 
-
-// Conseguir un analysis por ID
+// Conseguir un analysis por ID con su feedback (máximo uno)
 app.get('/analysis/:id', (req, res) => {
     const { id } = req.params;
+
     const query = `
-    SELECT a.analysis_id, a.submission_id, a.ia_percentage, a.ia_detected, a.explanation, f.feedback_id, f.comment
+    SELECT 
+        a.analysis_id, 
+        a.submission_id, 
+        a.ia_percentage, 
+        a.ia_detected, 
+        a.explanation,
+        f.feedback_id, 
+        f.comment
     FROM Analysis a
-    LEFT JOIN Feedbacks f ON a.analysis_id = f.analysis_id
-    WHERE a.analysis_id = ?
+    LEFT JOIN Feedback f ON a.analysis_id = f.analysis_id
+    WHERE a.analysis_id = ?;
     `;
 
     db.query(query, [id], (err, results) => {
-        if (err) return res.status(500).json({ error: 'Error en DB'});
-        if (results.length === 0) return res.status(404).json({ error: 'Análisis no encontrado' });
-        res.json(results[0]);
+        if (err) {
+            console.error("❌ Error en DB:", err);
+            return res.status(500).json({ error: 'Error en DB' });
+        }
+
+        if (results.length === 0) {
+            return res.status(404).json({ error: 'Análisis no encontrado' });
+        }
+
+        res.json(results[0]); // un solo objeto
     });
 });
+
 
 // Crear un feedback
 app.post('/feedback', (req, res) => {
@@ -62,7 +72,7 @@ app.post('/feedback', (req, res) => {
 app.delete('/feedback/:id', async (req, res) => {
     const feedbackId = req.params.id;
     try {
-        const [result] = await db.query('DELETE FROM feedback WHERE id = ?', [feedbackId]);
+        const [result] = await db.query('DELETE FROM Feedbacks WHERE id = ?', [feedbackId]);
         if (result.affectedRows === 0) {
             return res.status(404).json({ message: 'Feedback no encontrado' });
         }

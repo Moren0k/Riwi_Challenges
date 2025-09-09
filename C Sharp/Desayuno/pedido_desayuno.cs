@@ -28,7 +28,7 @@ namespace desayuno
 
             if (coffe)
             {
-                total
+                total;
             }
             // Si queire cafe sumar el precio del cafe al total
 

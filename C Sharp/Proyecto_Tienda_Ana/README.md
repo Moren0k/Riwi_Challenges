@@ -17,7 +17,7 @@ Crear un sistema en **C# (consola)** que simule el funcionamiento de la tienda d
 
 ---
 
-## 📌 Requerimientos del programa
+## Requerimientos del programa
 
 ### 1. Productos iniciales
 
@@ -65,7 +65,7 @@ Al final, el programa debe mostrar:
 
 ---
 
-## 👥 Recomendación
+## Recomendación
 
 Trabajen en equipo (célula). Cada integrante puede encargarse de una parte:
 

@@ -74,3 +74,59 @@ Trabajen en equipo (célula). Cada integrante puede encargarse de una parte:
 3. Validaciones de compra.  
 4. Aplicar descuentos.  
 5. Generar el ticket final.  
+
+---
+
+## ✅ Checklist – Proyecto Tienda de Ana
+
+## Productos iniciales
+
+- [x] Crear una estructura para los productos (nombre, precio, stock).  
+- [x] Iniciar con al menos 4 productos en un diccionario o lista.  
+
+## Mostrar productos
+
+- [x] Al arrancar el programa, mostrar todos los productos disponibles.  
+- [x] Que se vea el nombre, precio y stock.  
+
+## Comprar productos
+
+- [x] Pedir al usuario el nombre del producto que quiere comprar.  
+- [x] Validar si el producto existe en la lista.  
+- [x] Preguntar la cantidad a comprar.  
+- [x] Verificar si hay suficiente stock:  
+  - [x] Sí hay → descontar del inventario.  
+  - [x] Sí hay → sumar al total de la compra.  
+  - [x] Sí hay → guardar registro en un historial/carrito.  
+  - [x] No hay → mostrar mensaje de error.  
+
+## Seguir comprando
+
+- [x] Preguntar si quiere seguir comprando después de cada compra.  
+- [x] Si dice “sí”, mostrar nuevamente la lista de productos.  
+- [x] Si dice “no”, terminar la compra y pasar al ticket.  
+
+## Descuentos
+
+- [x] Aplicar 10% de descuento si el total > $10.000.  
+- [x] Aplicar 20% de descuento si el total > $20.000.  
+
+## Ticket final
+
+- [x] Mostrar lista de productos comprados.  
+- [ ] Mostrar cantidad y subtotal por producto.  ![Pendiente]
+- [x] Mostrar el total de la compra con descuento aplicado.  
+- [x] Mostrar mensaje final: **"¡Gracias por comprar en la tienda de Ana!"**  
+
+---
+
+### Ejemplo de ejecución
+
+Bienvenido a la tienda de Ana
+    == TICKET TOTAL ==
+    2 alfajores -> $2000
+    1 papas -> $2000
+    ------------------
+    Subtotal: $4000
+    Descuento: $0
+    TOTAL: $4000

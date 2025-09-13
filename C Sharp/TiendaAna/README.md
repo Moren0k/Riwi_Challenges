@@ -119,14 +119,3 @@ Trabajen en equipo (célula). Cada integrante puede encargarse de una parte:
 - [x] Mostrar mensaje final: **"¡Gracias por comprar en la tienda de Ana!"**  
 
 ---
-
-### Ejemplo de ejecución
-
-Bienvenido a la tienda de Ana
-    == TICKET TOTAL ==
-    2 alfajores -> $2000
-    1 papas -> $2000
-    ------------------
-    Subtotal: $4000
-    Descuento: $0
-    TOTAL: $4000

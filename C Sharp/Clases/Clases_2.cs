@@ -22,8 +22,7 @@ public class Program
         //Recorre la lista de clientes con foreach.
         foreach (var cliente in ventas)
         {
-            Console.WriteLine($@"ID:[{cliente.Id}]Hola soy {cliente.Nombre} tengo {cliente.Edad}Años 
-            Y compre ID:[{cliente.Producto2.Codigo}] {cliente.Producto2.Nombre} y me costo:  ${cliente.Producto2.Precio}");
+            Console.WriteLine($"ID:[{cliente.Id}]Hola soy {cliente.Nombre} tengo {cliente.Edad}Años Y compre ID:[{cliente.Producto2.Codigo}] {cliente.Producto2.Nombre} y me costo:  ${cliente.Producto2.Precio}");
         }
     }
 }

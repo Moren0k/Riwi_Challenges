@@ -1,5 +1,4 @@
 namespace Clases;
-
 public class Program
 {
     public record Productos2 (int Codigo, string Nombre, double Precio);//Define un producto Usando record

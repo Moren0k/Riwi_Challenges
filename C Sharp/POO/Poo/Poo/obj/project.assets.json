@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/POO/Poo/Poo/Poo.csproj",
+      "projectUniqueName": "/home/kevinmorenocsharp/RiderProjects/Riwi_Challenges/C Sharp/POO/Poo/Poo/Poo.csproj",
       "projectName": "Poo",
-      "projectPath": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/POO/Poo/Poo/Poo.csproj",
+      "projectPath": "/home/kevinmorenocsharp/RiderProjects/Riwi_Challenges/C Sharp/POO/Poo/Poo/Poo.csproj",
       "packagesPath": "/home/kevinmorenocsharp/.nuget/packages/",
-      "outputPath": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/POO/Poo/Poo/obj/",
+      "outputPath": "/home/kevinmorenocsharp/RiderProjects/Riwi_Challenges/C Sharp/POO/Poo/Poo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kevinmorenocsharp/.nuget/NuGet/NuGet.Config"

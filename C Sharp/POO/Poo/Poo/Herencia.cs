@@ -7,14 +7,15 @@ public class Herencia
     {
         public int Espada { get; set; }
         public string? Armadura { get; set; }
-        
-        public Guerrero(string nombre, int fuerza, int inteligencia, int defensa, int vida, int espada, string? armadura)
+
+        public Guerrero(string nombre, int fuerza, int inteligencia, int defensa, int vida, int espada,
+            string? armadura)
             : base(nombre, fuerza, inteligencia, defensa, vida) //Constructor
         {
             Espada = espada;
             Armadura = armadura;
         }
-        
+
         public void Habilidad()
         {
             Console.WriteLine($"Habilidad");

@@ -12,11 +12,11 @@
                 <form asp-action="Guardar">
                     <div class="row"> <!-- Campos de entrada: Nombre, Apellido, Correo, Dirección, Teléfono -->
                         <div class="col">
-                            <label for="">Nombre</label>
+                            <label>Nombre</label>
                             <input type="text" class="form-control" name="Nombre">
                         </div>
                         <div class="col">
-                            <label for="">Apellido</label>
+                            <label>Apellido</label>
                             <input type="text" class="form-control" name="Apellido">
                         </div>
                         <div>
@@ -53,7 +53,7 @@
             </tr>
             </thead>
             <tbody>
-            @if (Model != null && Model.Any()) // Validar que la lista (Model) no esté vacía o nula
+            @if (Model.Any()) // Validar que la lista (Model) no esté vacía o nula
             {
                 foreach (var cliente in Model) // Recorrer la lista de clientes
                 {

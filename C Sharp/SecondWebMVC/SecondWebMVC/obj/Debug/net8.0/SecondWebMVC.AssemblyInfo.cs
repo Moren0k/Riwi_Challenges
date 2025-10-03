@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecondWebMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d2c0454d7bfce30995dc75c5e5d7e46bee4f554")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faa788eff22dec401b9bd12f419b62f5c00f67cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecondWebMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecondWebMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,7 +8,7 @@ public class ClienteController : Controller
 {
     // Lista estática que almacenará en memoria a todos los clientes creados en la aplicación
     // (NOTA: Al ser estática, los datos se comparten en todas las instancias del controlador mientras dure la ejecución)
-    private static readonly List<Cliente> Clientes = [];
+    public static readonly List<Cliente> Clientes = [];
 
     // Acción que retorna la vista principal (Index) mostrando la lista completa de clientes
     public ActionResult Index()
@@ -58,6 +58,7 @@ public class ClienteController : Controller
         // Si lo encuentra, actualiza cada campo con la nueva información recibida
         cliente.Nombre = clienteEditado.Nombre;
         cliente.Apellido = clienteEditado.Apellido;
+        cliente.Sexo = clienteEditado.Sexo;
         cliente.Correo = clienteEditado.Correo;
         cliente.Direccion = clienteEditado.Direccion;
         cliente.Telefono = clienteEditado.Telefono;

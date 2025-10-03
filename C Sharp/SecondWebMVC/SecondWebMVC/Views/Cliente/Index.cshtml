@@ -2,6 +2,7 @@
 <!-- El modelo que recibe esta vista es una lista (IEnumerable) de objetos Cliente -->
 
 <h1 class="text-center">Administrador de Clientes</h1>
+<a class="btn btn-primary m-2" asp-action="Index" asp-controller="Producto">Ir a Productos</a> <!-- Ir a Productos -->
 
 <div class="row">
     <!-- Columna del formulario para registrar un nuevo cliente -->
@@ -20,6 +21,10 @@
                             <input type="text" class="form-control" name="Apellido">
                         </div>
                         <div>
+                            <label>Sexo</label>
+                            <input type="text" class="form-control" name="Sexo" placeholder="h.Hombre/ m.Mujer">
+                        </div>
+                        <div>
                             <label>Correo</label>
                             <input type="email" class="form-control" name="Correo">
                         </div>
@@ -34,7 +39,7 @@
                     </div>
                     <hr>
                     <!-- Botón para enviar los datos y registrar el cliente -->
-                    <button type="submit" class="btn btn-success w-100">Guardar</button>
+                    <button type="submit" class="btn btn-success w-100">Guardar Cliente</button>
                 </form>
             </div>
         </div>
@@ -77,7 +82,7 @@
             else
             {
                 <!-- Si no hay clientes en la lista, mostrar este mensaje -->
-                <p class="text-center text-danger">¡No hay clientes!</p>
+                <p class="text-center text-danger">¡No hay Clientes!</p>
             }
             </tbody>
         </table>

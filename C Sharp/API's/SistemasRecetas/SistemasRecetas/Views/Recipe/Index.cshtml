@@ -1,0 +1,34 @@
+@model List<SistemasRecetas.Models.Recipe>
+
+<h2>Recetas</h2>
+
+<form asp-action="Index" asp-controller="Recipe" method="post">
+    <h6 class="text-center">Buscar Receta</h6>
+
+    <div class="row">
+        <div>
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-success w-100">Buscar</button>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var r in Model)
+        {
+            <li>
+                <strong>@r.strMeal</strong><br />
+                <img src="@r.strMealThumb" width="200" /><br />
+                <p>@r.strInstructions</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No se encontraron recetas.</p>
+}

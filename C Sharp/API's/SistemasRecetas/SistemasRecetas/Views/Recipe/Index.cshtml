@@ -1,14 +1,10 @@
 @model List<SistemasRecetas.Models.Recipe>
-
-<h2>Recetas</h2>
-
 <form asp-action="Index" asp-controller="Recipe" method="post">
-    <h6 class="text-center">Buscar Receta</h6>
+    <h3 class="text-center">Buscar Receta</h3>
 
     <div class="row">
         <div>
-            <label>Nombre</label>
-            <input type="text" class="form-control" name="name">
+            <input type="text" class="form-control text-center" name="name">
         </div>
     </div>
     <hr>
@@ -21,8 +17,8 @@
         @foreach (var r in Model)
         {
             <li>
-                <strong>@r.strMeal</strong><br />
-                <img src="@r.strMealThumb" width="200" /><br />
+                <strong>@r.strMeal</strong><br/>
+                <img src="@r.strMealThumb" width="200"/><br/>
                 <p>@r.strInstructions</p>
             </li>
         }

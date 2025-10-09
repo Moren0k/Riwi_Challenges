@@ -1,4 +1,4 @@
-# 🧩 Contexto del Proyecto: Sistema de Tienda Online
+# Contexto del Proyecto: Sistema de Tienda Online
 
 ## 1. Descripción general
 

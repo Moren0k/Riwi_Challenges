@@ -9,6 +9,7 @@ Este documento resume la estructura, modelos, controladores, endpoints y comenta
 Aplicación ASP.NET Core MVC que consulta la API pública TheMealDB para buscar recetas y permite guardar recetas como "favoritos" en una base de datos MySQL usando Entity Framework Core (Pomelo).
 
 Puntos clave:
+
 - Framework: .NET 8 / ASP.NET Core MVC
 - ORM: Entity Framework Core (Pomelo MySql provider)
 - DBContext: `AppDbContext` con `Recipes` y `Favorites`
@@ -30,10 +31,12 @@ Puntos clave:
 Clase: `AppDbContext` (hereda de `DbContext`)
 
 Propiedades:
+
 - `DbSet<Recipe> Recipes` - colección de recetas (principalmente usada para modelar la respuesta externa).
 - `DbSet<Favorite> Favorites` - colección persistente de favoritos.
 
 Constructor:
+
 - `AppDbContext(DbContextOptions<AppDbContext> options)` - configurado en `Program.cs` usando `UseMySql` con la cadena de conexión `DefaultConnection`.
 
 ## Modelos (clases) - detalles para UML
@@ -103,6 +106,7 @@ Formato de respuesta interno:
   - `Delete` (POST) — Eliminar favorito por `Id`.
 
 Notas sobre flujo Add:
+
 - `Add` comprueba si `name` está vacío y si `idMeal` ya existe. Usa `TempData` para mensajes de feedback y redirige a `Index`.
 
 3) HomeController
@@ -112,6 +116,7 @@ Notas sobre flujo Add:
 ## Vistas
 
 Las vistas se encuentran en `Views/Recipe/Index.cshtml`, `Views/Favorites/*`, `Views/Home/*`. No entramos en detalles del markup, pero:
+
 - `Recipe/Index` itera la lista de `Recipe` y muestra botón para agregar a favoritos (usa `ViewBag.FavIds` para marcar ya agregadas).
 
 ## Migraciones y EF Core
@@ -120,6 +125,7 @@ Las vistas se encuentran en `Views/Recipe/Index.cshtml`, `Views/Favorites/*`, `V
 - `README.md` del proyecto contiene los paquetes recomendados y comandos para crear/aplicar migraciones.
 
 Pasos comunes:
+
 - Instalar paquetes NuGet (según README)
 - Configurar `DefaultConnection` en `appsettings.json`
 - `dotnet ef database update` para aplicar migraciones
@@ -134,7 +140,7 @@ Pasos comunes:
 ## Diagramas UML
 
 ![Diagrama de clases](Docs/DiagramaDeClases.jpeg)
-![Diagrama de la base de datos](Docs/DiagramaDeBaseDeDatos.jpeg)
+![Diagrama de casos de uso](Docs/CasosDeUso.jpeg)
 ![Diagrama de entidad-relación](Docs/DiagramaEntidad-Relacion.jpeg)
 
 ## Ejemplos JSON (TheMealDB)

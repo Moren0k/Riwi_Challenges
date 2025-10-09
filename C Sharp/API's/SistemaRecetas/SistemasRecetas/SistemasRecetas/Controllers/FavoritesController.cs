@@ -32,7 +32,7 @@ namespace SistemasRecetas.Controllers
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                TempData["Msg"] = "⚠️ Nombre vacío.";
+                TempData["Msg"] = "Nombre vacío.";
                 return RedirectToAction("Index", "Recipe");
             }
 
@@ -52,16 +52,16 @@ namespace SistemasRecetas.Controllers
                 {
                     _db.Favorites.Add(fav);
                     await _db.SaveChangesAsync();
-                    TempData["Msg"] = "✅ Agregado a favoritos.";
+                    TempData["Msg"] = "Agregado a favoritos.";
                 }
                 catch (Exception ex)
                 {
-                    TempData["Msg"] = $"❌ Error BD: {ex.Message}";
+                    TempData["Msg"] = $"Error BD: {ex.Message}";
                 }
             }
             else
             {
-                TempData["Msg"] = "⚠️ Ya estaba en favoritos.";
+                TempData["Msg"] = "Ya estaba en favoritos.";
             }
 
             return RedirectToAction(nameof(Index));
@@ -81,12 +81,12 @@ namespace SistemasRecetas.Controllers
             {
                 _db.Favorites.Add(model);
                 await _db.SaveChangesAsync();
-                TempData["Msg"] = "✅ Favorito creado.";
+                TempData["Msg"] = "Favorito creado.";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                TempData["Msg"] = $"❌ Error: {ex.Message}";
+                TempData["Msg"] = $"Error: {ex.Message}";
                 return View(model);
             }
         }
@@ -119,12 +119,12 @@ namespace SistemasRecetas.Controllers
                 fav.InstructionsText = model.InstructionsText;
 
                 await _db.SaveChangesAsync();
-                TempData["Msg"] = "✅ Favorito actualizado.";
+                TempData["Msg"] = "Favorito actualizado.";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                TempData["Msg"] = $"❌ Error: {ex.Message}";
+                TempData["Msg"] = $"Error: {ex.Message}";
                 return View(model);
             }
         }
@@ -137,7 +137,7 @@ namespace SistemasRecetas.Controllers
             var fav = await _db.Favorites.FindAsync(id);
             if (fav == null)
             {
-                TempData["Msg"] = "⚠️ No encontrado.";
+                TempData["Msg"] = "No encontrado.";
                 return RedirectToAction(nameof(Index));
             }
 
@@ -145,11 +145,11 @@ namespace SistemasRecetas.Controllers
             {
                 _db.Favorites.Remove(fav);
                 await _db.SaveChangesAsync();
-                TempData["Msg"] = "🗑️ Eliminado.";
+                TempData["Msg"] = "Eliminado.";
             }
             catch (Exception ex)
             {
-                TempData["Msg"] = $"❌ Error al eliminar: {ex.Message}";
+                TempData["Msg"] = $"Error al eliminar: {ex.Message}";
             }
 
             return RedirectToAction(nameof(Index));

@@ -39,7 +39,7 @@ namespace SistemasRecetas.Controllers
                 .SelectMany(r => r!.Meals!)
                 .ToList();
 
-            // 👉 Traer los IdMeal que ya están en favoritos para desactivar el botón
+            //  Traer los IdMeal que ya están en favoritos para desactivar el botón
             var favIds = await _db.Favorites
                 .Select(f => f.IdMeal!)
                 .Where(id => id != null)

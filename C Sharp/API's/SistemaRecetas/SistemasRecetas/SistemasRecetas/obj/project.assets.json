@@ -2934,31 +2934,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/kevinmorenocsharp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\SistemasRecetas\\SistemasRecetas\\SistemasRecetas.csproj",
+      "projectUniqueName": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/API's/SistemaRecetas/SistemasRecetas/SistemasRecetas/SistemasRecetas.csproj",
       "projectName": "SistemasRecetas",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\SistemasRecetas\\SistemasRecetas\\SistemasRecetas.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\SistemasRecetas\\SistemasRecetas\\obj\\",
+      "projectPath": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/API's/SistemaRecetas/SistemasRecetas/SistemasRecetas/SistemasRecetas.csproj",
+      "packagesPath": "/home/kevinmorenocsharp/.nuget/packages/",
+      "outputPath": "/home/kevinmorenocsharp/Documentos/Riwi_Challenges/C Sharp/API's/SistemaRecetas/SistemasRecetas/SistemasRecetas/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/kevinmorenocsharp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2971,13 +2964,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -3023,7 +3010,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

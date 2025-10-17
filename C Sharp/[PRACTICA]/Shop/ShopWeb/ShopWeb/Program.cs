@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ShopWeb.Data;
+using ShopWeb.Repositories;
+using ShopWeb.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString =
@@ -13,6 +15,8 @@ builder.Services.AddControllersWithViews();
 // Aquí se configuran las opciones del AppDbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>(); //IUserRepository
 
 var app = builder.Build();
 
@@ -50,6 +54,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=User}/{action=Index}/{id?}");
 
 app.Run();

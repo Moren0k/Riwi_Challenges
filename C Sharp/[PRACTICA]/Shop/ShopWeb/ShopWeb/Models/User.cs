@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ShopWeb.Models;
 
-public abstract class User
+public class User
 {
     [Key] public int Id { get; set; }
     [Required] [MaxLength(50)] public required string FirstName { get; set; } = "";

@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5009"; // ajusta al puerto de tu API
+const baseUrl = "http://localhost:5009"; // ajustar al puerto de la API
 const output = document.getElementById("output");
 
 // ===== UTIL =====
@@ -56,6 +56,7 @@ async function getCustomers() {
 async function addCustomer() {
   const customer = {
     name: document.getElementById("customerName").value,
+    lastName: document.getElementById("customerLastName").value,
     email: document.getElementById("customerEmail").value
   };
   const res = await fetch(`${baseUrl}/addCustomer`, {

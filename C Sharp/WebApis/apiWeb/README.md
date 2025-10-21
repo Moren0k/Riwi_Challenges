@@ -82,7 +82,6 @@ dotnet sln add apiWeb.Infrastructure/
 dotnet add apiWeb.Api reference apiWeb.Application
 dotnet add apiWeb.Application reference apiWeb.Domain
 dotnet add apiWeb.Infrastructure reference apiWeb.Application
-dotnet add apiWeb.Infrastructure reference apiWeb.Domain
 ```
 
 > Esto mantiene las dependencias limpias según las reglas de DDD.

@@ -1,10 +1,12 @@
 using Customers.Application.Services;
 using Customers.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Inject dependency
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddSingleton<CustomersServices>();
 
 
 // Add services to the container.
@@ -12,7 +14,20 @@ builder.Services.AddSingleton<ProductService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 var app = builder.Build();
+
+// 2️⃣ Middleware
+app.UseCors("AllowAll");
+app.UseRouting();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -47,13 +62,26 @@ app.MapDelete("/deleteProduct/{id}", (int id, ProductService productService) => 
     return productService.DeleteProduct(id);
 });
 
-app.MapGet("/weatherforecast", () =>
+/*CUSTOMERS*/
+app.MapGet("/getCustomer", ([FromServices] CustomersServices customersServices) =>
 {
-    var forecast = new[]
-    {
-        new { Date = DateTime.Now, TemperatureC = 25, Summary = "Warm" }
-    };
-    return forecast;
+    return Results.Ok(customersServices.GetCustomers());
+});
+
+app.MapPost("/addCustomer", ([FromBody] Customer customer, [FromServices] CustomersServices customersServices) =>
+{
+    var newCustomer = customersServices.AddCustomer(customer);
+    return Results.Created($"api/customer/{customer.Id}", newCustomer);
+});
+
+app.MapPatch("/updateCustomer/{id}", ([FromBody] Customer customer, [FromServices] CustomersServices customersServices) =>
+{
+    return customersServices.UpdateCustomer(customer);
+});
+
+app.MapDelete("/deleteCustomer/{id}", (int id, [FromServices] CustomersServices customersServices) =>
+{
+    return customersServices.DeleteCustomer(id);
 });
 
 

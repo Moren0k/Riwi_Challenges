@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Pruebas API</title>
+</head>
+<body>
+  <h1>Panel de Pruebas API</h1>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section>
+    <h2>Products</h2>
+
+    <form id="productForm">
+      <input type="number" id="productId" placeholder="ID (solo para editar o eliminar)" />
+      <input type="text" id="productName" placeholder="Nombre" />
+      <input type="text" id="productDescription" placeholder="Descripción" />
+      <input type="number" id="productPrice" placeholder="Precio" />
+      <button type="button" onclick="addProduct()">Agregar</button>
+      <button type="button" onclick="updateProduct()">Editar</button>
+      <button type="button" onclick="deleteProduct()">Eliminar</button>
+    </form>
+
+    <button onclick="getProducts()">Ver productos</button>
+  </section>
+
+  <hr>
+
+  <!-- ========== CUSTOMERS ========== -->
+  <section>
+    <h2>Customers</h2>
+
+    <form id="customerForm">
+      <input type="number" id="customerId" placeholder="ID (solo para editar o eliminar)" />
+      <input type="text" id="customerName" placeholder="Nombre" />
+      <input type="email" id="customerEmail" placeholder="Email" />
+      <button type="button" onclick="addCustomer()">Agregar</button>
+      <button type="button" onclick="updateCustomer()">Editar</button>
+      <button type="button" onclick="deleteCustomer()">Eliminar</button>
+    </form>
+
+    <button onclick="getCustomers()">Ver clientes</button>
+  </section>
+
+  <hr>
+
+  <h3>Resultado</h3>
+  <pre id="output"></pre>
+
+  <script src="./script.js"></script>
+</body>
+</html>

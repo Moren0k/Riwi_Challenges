@@ -4,8 +4,8 @@ namespace Customers.Application.Services;
 
 public class ProductService
 {
-    private readonly List<Product> _products = new(); //Lista de productos
-    private int _nextId = 1; //incrementar el ID
+    private readonly List<Product> _products = new(); //Lista de Products
+    private int _nextId = 1; //Incrementar el ID de los Products
     
     /*Crud Infrastructure (NO LOGICA DE NEGOCIO)*/
     
